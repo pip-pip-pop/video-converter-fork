@@ -1,0 +1,32 @@
+{
+    "h1":"हम पीडीएफ को आसान बनाते हैं",
+    "h2":"ऑल-इन-वन आसान ऑनलाइन पीडीएफ टूल का उपयोग करें",
+    "title":"List of all Android alarm libraries for use in your project",
+    "meta":"See collection of all Android alarm libraries, filter by license, modified date, languages, and select best for your usecase.",
+    "features":[
+       {
+          "name":"पीडीएफ को संपीड़ित करें",
+          "description":"गुणवत्ता खोए बिना अपने पीडीएफ का आकार कम करें",
+          "color":"blue",
+          "icon": "",
+          "url":"/hi/compress-pdf"
+          
+       },
+       {
+        "name":"पीडीएफ हटाएं",
+        "description":"गुणवत्ता खोए बिना अपने पीडीएफ का आकार कम करें",
+        "color":"blue",
+        "icon": "",
+        "url":"/hi/compress-pdf"
+        
+      },
+      {
+        "name":"स्प्लिट पीडीएफ",
+        "description":"गुणवत्ता खोए बिना अपने पीडीएफ का आकार कम करें",
+        "color":"blue",
+        "icon": "",
+        "url":"/hi/compress-pdf"
+        
+      }
+    ]
+ }

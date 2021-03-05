@@ -1,0 +1,51 @@
+{
+    "navbarBrandText": "Online Audio Converter",
+    "navbarBrandLogo": "favicon.ico",
+    "firstCat":[
+      {
+        "item": "item1",
+        "item2": "item2",
+        "item3": "item3",
+        "item4": "item4"
+      }
+    ],
+    "secondCat":[
+      {
+        "item": "item1",
+        "item2": "item2",
+        "item3": "item3",
+        "item4": "item4"
+      }
+    ],
+    "thirdCat":[
+      {
+        "item": "item1",
+        "item2": "item2",
+        "item3": "item3",
+        "item4": "item4"
+      }
+    ],
+    "fourCat":[
+      {
+        "item": "item1",
+        "item2": "item2",
+        "item3": "item3",
+        "item4": "item4"
+      }
+    ],
+    "fiveCat":[
+      {
+        "item": "item1",
+        "item2": "item2",
+        "item3": "item3",
+        "item4": "item4"
+      }
+    ],
+    "navItems":[
+       {
+        "name":"Blog",
+        "url":"/blog"
+       }
+     
+    ]
+}

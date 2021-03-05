@@ -1,0 +1,85 @@
+{
+    "logo":"favicon.ico",
+    "heading":"Online Audio Converter",
+    "company":[
+       {
+        "name":"About",
+        "url":"/about"
+          
+       },
+       {
+        "name":"Help",
+        "url":"/help"
+        
+      },
+      {
+        "name":"Blog",
+        "url":"/blog"
+        
+      }
+    ],
+    "product":[
+        {
+            "name":"Pricing",
+            "url":"/pricing"
+            
+        },
+        {
+            "name":"Team",
+            "url":"/team"
+        },
+        {
+            "name":"Developers",
+            "url":"/developers"
+            
+        }
+    ],
+    "networkSites":[
+        {
+            "name":"ABC.com",
+            "url":"/"
+            
+        },
+        {
+            "name":"PQR.com",
+            "url":"/"
+        },
+        {
+            "name":"XYZ.com",
+            "url":"/"
+            
+        }
+    ],
+    "social":[
+        {
+            "logo":"/assets/facebook.svg",
+            "url": "/",
+            "title":"abc"
+            
+        },
+        {
+            "logo":"/assets/youtube.svg",
+            "url": "/",
+            "title":"abc"
+        },
+        {
+            "logo":"/assets/instagram.svg",
+            "url": "/",
+            "title":"abc"
+            
+        },
+        {
+            "logo":"/assets/linkdin.svg",
+            "url": "/",
+            "title":"abc"
+            
+        },
+        {
+            "logo":"/assets/twitter.svg",
+            "url": "/",
+            "title":"abc"
+            
+        }
+    ],
+    "messege": "© 2021 pdf AG — Made with love for the people of the internet."
+ }
