@@ -2,272 +2,181 @@
 
 <body class="VideoConverter">
     <div class="Landing">
-        <div class="Landingtext">Upload your video to convert</div>
+        <div class="ProgressBar">
+            
+        </div>
+        
         <div class="Button">      
             <label for="files" class="InputButton">Upload</label>
             <input id="files" style="visibility:hidden;" type="file" onchange="get_video_source_from_input(this)">
         </div>
+        <div class="Landingtext">or drop your file here</div>
         <div class="Spinner">
 
         </div>
-        <div class="LoadingText">
+        
 
-        </div>
         <div class="DownloadBox">
-            <div class="DownloadIcon">
-
+            <img class="DownloadIcon" src="./assets/success.svg" loading=lazy>
+            <div class="LoadingText">
+                Thanks for your patience
             </div>
             <a class="DownloadLink">
-                Click here to download the file
+                Download
             </a>
 
         </div>
         <div class="Workspace">
             <p class="VideoTitle"></p>
-            <div class="Settings">
-                        <!-- <label for="resolution">Video resolution</label> -->
-                        <!-- <select name="field" id="resolution" onchange="ChangeHandler(this)">
-                            <option>default</option>
-                            <option>1080p</option>
-                            <option>720p</option>
-                            <option>480p</option>
-                            <option>360p</option>
-                            <option>240p</option>
-                            <option>144p</option>
-                        </select> -->
-                        <div name="field" class="FeatureValues" id="resolution" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Video resolution</div>
-                            <div class="FeatureValue ActiveFeature" >default</div>
-                            <div class="FeatureValue">1080p</div>
-                            <div class="FeatureValue">720p</div>
-                            <div class="FeatureValue">480p</div>
-                            <div class="FeatureValue">360p</div>
-                            <div class="FeatureValue">240p</div>
-                            <div class="FeatureValue">144p</div>
-                        </div>
-                        <!-- <label for="Vencoder" >Video encoder</label> -->
-                        <!-- <select name="field" id="Vencoder" onchange="ChangeHandler(this)">
-                            <option>default</option>
-                            <option>H.264</option>
-                            <option>MPEG4</option>
-
-                        </select> -->
-                        <div name="field" id="Vencoder"  class="FeatureValues" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Video encoder</div>
-                            <div class="FeatureValue ActiveFeature" >default</div>
-                            <div class="FeatureValue" >H.264</div>
-                            <div class="FeatureValue" >MPEG4</div>
-
-                        </div>
-                        <!-- <label for="Oformat" >Video ouput format</label> -->
-                        <!-- <select name="field" id="Oformat" onchange="ChangeHandler(this)">
-                            <option>MP4</option>
-                            <option>AVI</option>
-                            <option>MPG</option>
-                            <option>MOV</option>
-                            <option>FLV</option>
-                            <option>3GP</option>
-                            <option>WEBM</option>
-                            <option>MKV</option>
-                            <option>GIF</option>
-                            
-
-                        
-                        </select> -->
-                        <!-- <div class="FeatureValues" name="field" id="Oformat" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Video resolution</div>
-                            <div class="FeatureValue">MP4</div >
-                            <div class="FeatureValue">AVI</div >
-                            <div class="FeatureValue">MPG</div >
-                            <div class="FeatureValue">MOV</div >
-                            <div class="FeatureValue">FLV</div >
-                            <div class="FeatureValue">3GP</div >
-                            <div class="FeatureValue">WEBM</div >
-                            <div class="FeatureValue">MKV</div >
-                            <div class="FeatureValue">GIF</div >
-                            
-
-                        
-                        </div> -->
-                        <div class="TimeFrameHolder">
-                            <label for="timeFrame">Enter time frame</label>
-                            <input type="text" id="timeFrame" placeholder="eg 00:00:04.23 to 00:00:10.00" onchange="ChangeHandler(this)"/>
-                        </div>
-                        <!-- <label for="bitrate" >Video bitrate</label>
-                        <input type="text" name="field" placeholder="example 1024K" id="bitrate" onchange="ChangeHandler(this)"/>
-                        <label for="framerate" >Video framerate</label>
-                        <input id="framerate" name="field" type="text" placeholder="example 24" onchange="ChangeHandler(this)"/> -->
-                        <div class="Bitrate" >
-                            <div class="FeatureValues" id="bitrate">
-                                <div class="FeatureTitle">Video bitrate</div>
-                                <div class="FeatureValue ActiveFeature">default</div>
-                                <div class="FeatureValue">custom</div>
-                            </div>
-                            <input type="text" name="field" placeholder="example 1024K" id="RateInput" onchange="ChangeHandler(this)"/>
-                        </div>
-                        <div class="Framerate" >
-                            <div class="FeatureValues" id="framerate">
-
-                                <div class="FeatureTitle">Video framerate</div>
-                                <div class="FeatureValue ActiveFeature">default</div>
-                                <div class="FeatureValue">24</div>
-                                <div class="FeatureValue">30</div>
-                                <div class="FeatureValue">60</div>
-                                <div class="FeatureValue">custom</div>
-
-                            </div>
-                            <input type="text" name="field" placeholder="example 60" id="RateInput" onchange="ChangeHandler(this)"/>
-                        </div>
-                        
-                        <!-- <label for="Aencoder">Audio encoder</label>
-                        <select id="Aencoder" name="field" onchange="ChangeHandler(this)">
-                            <option>default</option>
-                            <option>MP3</option>
-                            <option>AAC</option>
-                        </select> -->
-                        <div  class="FeatureValues" id="Aencoder" name="field" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Audio encoder</div>
-                            <div class="FeatureValue ActiveFeature" >default</div >
-                            <div class="FeatureValue" >MP3</div >
-                            <div class="FeatureValue" >AAC</div >
-                        </div >
-                        <!-- <label for="Achannel">Audio channel</label>
-                        <select id="Achannel" name="field" onchange="ChangeHandler(this)">
-                            <option>Stereo</option>
-                            <option>Mono</option>
-                        </select> -->
-                        <div class="FeatureValues" id="Achannel" name="field" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Audio type</div>
-                            <div class="FeatureValue ActiveFeature">Stereo</div>
-                            <div class="FeatureValue">Mono</div>
-                        </div>
-                        <!-- <label for="Aquality">Choose audio quality</label>
-                        <select id="Aquality" name="field" onchange="ChangeHandler(this)">
-                            <option>default</option>
-                            <option>48k</option>
-                            <option>64k</option>
-                            <option>80k</option>
-                            <option>96k</option>
-                            <option>128k</option>
-                            <option>160k</option>
-                            <option>256k</option>
-                            <option>320k</option>
-                        </select> -->
-                        <div class="FeatureValues" id="Aquality" name="field" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Audio quality</div>
-                            <div class="FeatureValue ActiveFeature">default</div>
-                            <div class="FeatureValue">48k</div>
-                            <div class="FeatureValue">64k</div>
-                            <div class="FeatureValue">80k</div>
-                            <div class="FeatureValue">96k</div>
-                            <div class="FeatureValue">128k</div>
-                            <div class="FeatureValue">160k</div>
-                            <div class="FeatureValue">256k</div>
-                            <div class="FeatureValue">320k</div>
-                        </div>
-                        <!-- <label for="Raudio">Remove audio</label>
-                        <select id="Raudio" name="field" onchange="ChangeHandler(this)">
-                            <option>
-                                no
-                             </option>
-                            <option>
-                               yes
-                            </option>
-                            
-                        </select>
-                        
-                        <label  for="Onlyaudio">Only audio</label>
-                        <label class="switch">
-                            <input id="Onlyaudio" type="checkbox" name="field" onchange="ChangeHandler(this)">
-                            <span class="slider round"></span>
-                        </label> -->
-                       <div class="RemoveAudio">
-                            <div class="FeatureTitle">Remove audio</div>
-                            <div class="switch"  name="field" onchange="ChangeHandler(this)">
-                                <input id="Raudio" class="checkbox" type="checkbox" name="field" onchange="ChangeHandler(this)">
-                                <span class="sliderSwitch round" id="RAudio"></span>
-                            </div>
-                       </div>
-                        <div class="OnlyAudio">
-                            <div class="FeatureTitle">Only audio</div>
-                            <div class="switch">
-                                <input id="Onlyaudio" class="checkbox" type="checkbox" name="field" onchange="ChangeHandler(this)">
-                                <span class="sliderSwitch round" id="OnlyAudio"></span>
-                            </div>
-                        </div>
-                       
-
-
-                    <!-- <label for="playback" >Video playback speed</label>
-                        <select id="playback" name="field" onchange="ChangeHandler(this)">
-                            <option>default</option>
-                            <option>0.25x</option>
-                             <option>0.5x</option>
-                             <option>0.75x</option>
-                             <option>1x</option>
-                             <option>1.25x</option>
-                             <option>1.5x</option>
-                             <option>1.75x</option>
-                             <option>2x</option>
-                        </select> -->
-                        <div  class="FeatureValues" id="playback" name="field" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Playback speed</div>
-                            <div class="FeatureValue ActiveFeature" >default</div >
-                            <div class="FeatureValue" >0.25x</div >
-                             <div class="FeatureValue" >0.5x</div >
-                             <div class="FeatureValue" >0.75x</div >
-                             <div class="FeatureValue" >1x</div >
-                             <div class="FeatureValue" >1.25x</div >
-                             <div class="FeatureValue" >1.5x</div >
-                             <div class="FeatureValue" >1.75x</div >
-                             <div class="FeatureValue" >2x</div >
-                        </div >
-                        <div class="VideoSize">
-                            <div class="FeatureTitle">Video size</div>
-                            <input type="text" id="size" name="field" placeholder="size in MB,example 10" onchange="ChangeHandler(this)">
-                        </div>
-                    <!-- <label for="size" >Video size</label>
-                        <input type="text" id="size" name="field" placeholder="size in MB,example 10" onchange="ChangeHandler(this)">
-                         -->
-                    <!-- <label for="speed">Encoding speed</label> -->
-                    <div class="HoverDisplay">
-                        <!-- <select id="speed" name="field" onchange="ChangeHandler(this)">
-                            <option>ultrafast</option>
-                            <option>superfast</option>
-                            <option>veryfast</option>
-                            <option>faster</option>
-                            <option>fast</option>
-                            <option>medium</option>
-                            <option>slow</option>
-                            <option>slower</option>
-                            <option>veryslow</option>
-                        </select> -->
-                        <div class="FeatureValues" id="speed" name="field" onchange="ChangeHandler(this)">
-                            <div class="FeatureTitle">Encoding speed</div>
-                            <div class="FeatureValue ActiveFeature">ultrafast</div >
-                            <div class="FeatureValue">superfast</div >
-                            <div class="FeatureValue">veryfast</div >
-                            <div class="FeatureValue">faster</div >
-                            <div class="FeatureValue">fast</div >
-                            <div class="FeatureValue">medium</div >
-                            <div class="FeatureValue">slow</div >
-                            <div class="FeatureValue">slower</div >
-                            <div class="FeatureValue">veryslow</div >
-                        </div>
-
+            <div class="SettingsDiv">
+                <div class="SettingsToggler">
+                    <div class="Toggler ActiveToggler" id="videoToggler">
+                        Video
                     </div>
-                    <div class="slidecontainer">
-                        <div class="FeatureTitle">CRF value</div>
-                        <input name="field" type="range" min="0" max="51" value="23" class="slider" id="Qrange" onchange="ChangeHandler(this)">
-                        <p id="QrangeValue">23</p>
+                    <div class="Toggler" id="audioToggler">
+                        Audio
                     </div>
-                    
+                    <div class="Toggler" id="compressionToggler">
+                        Compression settings
+                    </div>
 
-                
+                </div>
+                <div class="Wrapper">
+                        <div class="TogglerSettings" id="videoTogglerSettings">
+                            <div name="field" class="FeatureValues" id="resolution" onchange="ChangeHandler(this)">
+                                <div class="FeatureTitle">Video resolution</div>
+                                <div class="FeatureValue ActiveFeature" >default</div>
+                                <div class="FeatureValue">1080p</div>
+                                <div class="FeatureValue">720p</div>
+                                <div class="FeatureValue">480p</div>
+                                <div class="FeatureValue">360p</div>
+                                <div class="FeatureValue">240p</div>
+                                <div class="FeatureValue">144p</div>
+                            </div>
 
-        </div>
+                            <div name="field" id="Vencoder"  class="FeatureValues" onchange="ChangeHandler(this)">
+                                <div class="FeatureTitle">Video encoder</div>
+                                <div class="FeatureValue ActiveFeature" >default</div>
+                                <div class="FeatureValue" >H.264</div>
+                                <div class="FeatureValue" >MPEG4</div>
+    
+                            </div>
+       
+                            <div class="TimeFrameHolder">
+                                <label for="timeFrame">Enter time frame</label>
+                                <input type="text" id="timeFrame" placeholder="eg 00:00:04.23 to 00:00:10.00" onchange="ChangeHandler(this)"/>
+                            </div>
+                           <div class="Bitrate" >
+                                <div class="FeatureValues" id="bitrate">
+                                    <div class="FeatureTitle">Video bitrate</div>
+                                    <div class="FeatureValue ActiveFeature">default</div>
+                                    <div class="FeatureValue">custom</div>
+                                </div>
+                                <input type="text" name="field" class="rateInput" placeholder="example 1024K" id="bitrate" onchange="ChangeHandler(this)"/>
+                            </div>
+                            <div class="Framerate" >
+                                <div class="FeatureValues" id="framerate">
+    
+                                    <div class="FeatureTitle">Video framerate</div>
+                                    <div class="FeatureValue ActiveFeature">default</div>
+                                    <div class="FeatureValue">24</div>
+                                    <div class="FeatureValue">30</div>
+                                    <div class="FeatureValue">60</div>
+                                    <div class="FeatureValue">custom</div>
+                                    
+                                </div>
+                                <input type="text" name="field" placeholder="example 60" class="rateInput" id="framerate" onchange="ChangeHandler(this)"/>
+                            </div>
+                            <div  class="FeatureValues" id="playback" name="field" onchange="ChangeHandler(this)">
+                                <div class="FeatureTitle">Playback speed</div>
+                                <div class="FeatureValue ActiveFeature" >default</div >
+                                <div class="FeatureValue" >0.25x</div >
+                                <div class="FeatureValue" >0.5x</div >
+                                <div class="FeatureValue" >0.75x</div >
+                                <div class="FeatureValue" >1x</div >
+                                <div class="FeatureValue" >1.25x</div >
+                                <div class="FeatureValue" >1.5x</div >
+                                <div class="FeatureValue" >1.75x</div >
+                                <div class="FeatureValue" >2x</div >
+                            </div >
+                        </div>
+                        <div class="TogglerSettings" id="audioTogglerSettings">
+                                 
+                            <div  class="FeatureValues" id="Aencoder" name="field" onchange="ChangeHandler(this)">
+                                <div class="FeatureTitle">Audio encoder</div>
+                                <div class="FeatureValue ActiveFeature" >default</div >
+                                <div class="FeatureValue" >MP3</div >
+                                <div class="FeatureValue" >AAC</div >
+                            </div >
+ 
+                            <div class="FeatureValues" id="Achannel" name="field" onchange="ChangeHandler(this)">
+                                <div class="FeatureTitle">Audio type</div>
+                                <div class="FeatureValue ActiveFeature">Stereo</div>
+                                <div class="FeatureValue">Mono</div>
+                            </div>
+ 
+                            <div class="FeatureValues" id="Aquality" name="field" onchange="ChangeHandler(this)">
+                                <div class="FeatureTitle">Audio quality</div>
+                                <div class="FeatureValue ActiveFeature">default</div>
+                                <div class="FeatureValue">48k</div>
+                                <div class="FeatureValue">64k</div>
+                                <div class="FeatureValue">80k</div>
+                                <div class="FeatureValue">96k</div>
+                                <div class="FeatureValue">128k</div>
+                                <div class="FeatureValue">160k</div>
+                                <div class="FeatureValue">256k</div>
+                                <div class="FeatureValue">320k</div>
+                            </div>
 
-        <button id="ConvertButton" onclick="Actual_API_Function()">Convert</button>
+                            <div class="RemoveAudio">
+                                    <div class="FeatureTitle">Remove audio</div>
+                                    <div class="switch"  name="field" onchange="ChangeHandler(this)">
+                                        <input id="Raudio" class="checkbox" type="checkbox" name="field" onchange="ChangeHandler(this)">
+                                        <span class="sliderSwitch round" id="RAudio"></span>
+                                    </div>
+                            </div>
+                            <div class="OnlyAudio">
+                                <div class="FeatureTitle">Only audio</div>
+                                <div class="switch">
+                                    <input id="Onlyaudio" class="checkbox" type="checkbox" name="field" onchange="ChangeHandler(this)">
+                                    <span class="sliderSwitch round" id="OnlyAudio"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="TogglerSettings" id="compressionTogglerSettings">
+                            
+                            <div class="VideoSize">
+                                <div class="FeatureTitle">Video size</div>
+                                <input type="text" id="size" name="field" placeholder="size in MB,example 10" onchange="ChangeHandler(this)">
+                            </div>
+                            <div class="HoverDisplay">
+            
+                                <div class="FeatureValues" id="speed" name="field" onchange="ChangeHandler(this)">
+                                    <div class="FeatureTitle">Encoding speed</div>
+                                    <div class="FeatureValue ActiveFeature">ultrafast</div >
+                                    <div class="FeatureValue">superfast</div >
+                                    <div class="FeatureValue">veryfast</div >
+                                    <div class="FeatureValue">faster</div >
+                                    <div class="FeatureValue">fast</div >
+                                    <div class="FeatureValue">medium</div >
+                                    <div class="FeatureValue">slow</div >
+                                    <div class="FeatureValue">slower</div >
+                                    <div class="FeatureValue">veryslow</div >
+                                </div>
+        
+                            </div>
+                            <div class="slidecontainer">
+                                <div class="FeatureTitle">CRF value</div>
+                                <input name="field" type="range" min="0" max="51" value="23" class="slider" id="Qrange" onchange="ChangeHandler(this)">
+                                <p id="QrangeValue">23</p>
+                            </div>
+                        </div>
+                    <label class="convertButtonLabel">To convert instantly, click here</label>
+                    <button id="ConvertButton" onclick="Actual_API_Function()">Convert</button>
+                   
+                </div>
+
+            </div>
 
         </div>
         <div class="Spinner">
@@ -276,19 +185,10 @@
         <div class="LoadingText">
 
         </div>
-        <div class="DownloadBox">
-            <div class="DownloadIcon">
 
-            </div>
-            <a class="DownloadLink">
-                Click here to download the file
-            </a>
-
-        </div>
     </div>
         
 
-<!-- <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.9.5/dist/ffmpeg.min.js"></script> -->
 <script src="./src/JS libraries/ffmpeg.min.js"></script>
 <script src="./src/VideoConverterJS/App.js"></script>
 <link rel="stylesheet" href="./public/styles/VideoConverter/style.css">

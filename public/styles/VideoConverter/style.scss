@@ -39,30 +39,41 @@
         width: 100%;
         height: 300px;
         @include flexColumn();
+        // display: none;
+        .ProgressBar{
+            width: 0%;
+            border-bottom:8px solid white;
+            position: absolute;
+            top: 0;
+            align-self: flex-start;
+
+        }
         .Landingtext{
-            width: 100%;
-            height: 20%;
-            color: white;
+            width: fit-content;
+            height: fit-content;
             @include flexRow();
-            font-size: 16px;
+            font-size: 12px;
+            color:white;
+            // display: none;
+            
         }
     .Button{
-        // display: none;
         width: 120px;
         height: 60px;
         @include flexColumn();
         // display: none;
     .InputButton{
-        width: 100px;
-        height: 60px;
+        width: 140px;
+        height: 70px;
         background: white;
         color:#353535;
         @include flexColumn();
         font-size: 14px;
         cursor: pointer;
-
+        transition: 0.2s;
         &:hover{
-            background: grey;
+            background: none;
+            border: 1px solid white;
             color: white;
         }
         
@@ -89,28 +100,33 @@
 }
 .DownloadBox{
     width: 500px;
-    height: 50px;
-    display: flex;
+    height: 200px;
     display: none;
-
-// .DownloadIcon{
-//     width: 50px;
-//     height: 50px;
-//     background: url("./media/icons/download.png");
-//     background-size: contain;
-//     background-repeat: no-repeat;
-
-// }
-.DownloadLink{
-    width: 450px;
+    @include flexColumn();
+    justify-content: space-around;
+    display: none;
+.DownloadIcon{
+    width: 50px;
     height: 50px;
-    
-    text-align: center;
-    text-decoration: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.DownloadLink{
+    width: 140px;
+    height: 50px;
     background: white;
-    color: #353535;
-    font-size: 18px;
-    @include flexRow();
+    color:#353535;
+    @include flexColumn();
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    &:hover{
+        background: none;
+        border: 1px solid white;
+        color: white;
+    }
 }
 }
 }
@@ -121,159 +137,248 @@
         @include flexColumn();
         text-align: center;
         justify-content: space-around;
-        display: none;
-        // justify-content: space-around;
         padding-left: 2%;
         padding-right: 2%;
+        background: white;
+        display: none;
+        
         .VideoTitle{
-            color: white;
+            color: #353535;
             height: 0px;
         }
-        .Settings{
+        .SettingsDiv{
             width: 100%;
-            height: 80%;
-            
-            background: white;
+            height: 90%;
             @include flexColumn();
-            justify-content: space-around;
-            align-items: flex-start;
-            font-size: 14px;
-                    
-            .FeatureValues{
-                width: fit-content;
-                height: 30px;
-                @include flexRow();
-                gap: 3px;
-                
-                .FeatureTitle{
-                    width: 200px;
-                    height: 100%;
-                    @include flexColumn();
-                }
-                .FeatureValue{
-                    transition: 0.2s;
-                    width:70px;
-                    height: 100%;
-                    background: rgb(210,210,210);
-                    background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgba(201, 201, 201, 0.89) 40%,rgba(194, 194, 194, 0.89) 50%,rgba(201, 201, 201, 0.89) 60%, rgb(230, 230, 230) 100%);
-                    box-shadow: 0 0 2px  rgba(0,0,0,0.5);
-                    // background: linear-gradient(180deg, rgba(210,210,210,1) 0%, rgba(163,163,163,1) 56%, rgba(210,210,210,1) 100%);
-                    color: #646464;
-                    @include flexRow();
-                    cursor: pointer;
-                    &:nth-child(2)
-                    {
-                        border-bottom-left-radius: 10px;
-                        border-top-left-radius: 10px;
-                    }
-                    &:nth-last-child(1)
-                    {
-                        
-                        border-bottom-right-radius: 10px;
-                        border-top-right-radius: 10px;
-                    }
-                    &:hover{
-                        
-                        background: rgb(210,210,210);
-                        background: linear-gradient(180deg, rgba(210,210,210,1) 0%, rgba(173, 173, 173, 0.89) 56%, rgba(210,210,210,1) 100%);
-                        
-                    }
-
-                }
-                .ActiveFeature{
-                    background: rgb(56, 56, 56);
-                    color: white; 
-
-                }
-                
-            }
-            .Bitrate,.Framerate,.VideoSize{
-                width: fit-content;
-                height:30px;
-                @include flexRow();
-                gap: 10px;
-               
-                input{
-                    width: 150px;
-                    height: 30px;
-
-                }
-            }
-            #RateInput{
-                display: none;
-            }
-            .VideoSize{
-                width: fit-content;
-                height:30px;
-                @include flexRow();
-                .FeatureTitle{
-                    width: 200px;
-                    height: 100%;
-                    @include flexColumn();
-                }
-            }
-
-                
-            .Heading{
-                width:100%;
-                height: 20%;
+            justify-content: space-evenly;
+            .SettingsToggler{
+                width: 85%;
+                height: 50px;
                 @include flexRow();
                 align-self: flex-start;
-                font-size: 18px;
-                font-weight: 400px;
-                box-shadow: 0 0 20px rgba(109, 109, 109, 0.116);
-            }
-            .TimeFrameHolder{
-                width: 100%;
-                height: 50px;
-                @include flexColumn();
-                display: none;
-                #timeFrame{
-                    width: 200px;
+                .Toggler{
+                    width: 25%;
+                    height: 70%;
+                    @include flexColumn();
+                    border: 1px solid #353535;
+                    transition: 0.2s;
+                    cursor: pointer;
+                    &:hover{
+                        background: rgba(218, 218, 218, 0.637);
+                    }
+
                 }
+                .ActiveToggler{
+                    background: #353535;
+                    color: white;
+                }
+            }
+            .Wrapper
+            {
+                width: 100%;
+                height: 80%;
+                @include flexRow();
+                justify-content: space-around;
+            .TogglerSettings{
+                width: 85%;
+                height: 100%;
+                padding: 1%;
+                padding-top: 10%;
+                padding-bottom: 10%;
+                @include flexColumn();
+                justify-content: space-between;
+                border: 1px solid #353535;
+                align-items: flex-start;
+                font-size: 14px;
+                user-select: none;
+                // box-shadow: 0 0 5px rgba(0,0,0,0.2);
+                display: none;
+                .FeatureValues{
+                    width: fit-content;
+                    height: 30px;
+                    @include flexRow();
+                    gap: 3px;
+                    
+                    .FeatureTitle{
+                        width: 200px;
+                        height: 100%;
+                        @include flexColumn();
+                    }
+                    .FeatureValue{
+                        transition: 0.2s;
+                        width:70px;
+                        height: 100%;
+                        background: rgb(210,210,210);
+                        background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgba(201, 201, 201, 0.89) 40%,rgba(194, 194, 194, 0.89) 50%,rgba(201, 201, 201, 0.89) 60%, rgb(230, 230, 230) 100%);
+                        box-shadow: 0 0 2px  rgba(0,0,0,0.5);
+                        // background: linear-gradient(180deg, rgba(210,210,210,1) 0%, rgba(163,163,163,1) 56%, rgba(210,210,210,1) 100%);
+                        color: #646464;
+                        @include flexRow();
+                        cursor: pointer;
+                        &:nth-child(2)
+                        {
+                            border-bottom-left-radius: 10px;
+                            border-top-left-radius: 10px;
+                        }
+                        &:nth-last-child(1)
+                        {
+                            
+                            border-bottom-right-radius: 10px;
+                            border-top-right-radius: 10px;
+                        }
+                        &:hover{
+                            
+                            background: rgb(210,210,210);
+                            background: linear-gradient(180deg, rgba(210,210,210,1) 0%, rgba(173, 173, 173, 0.89) 56%, rgba(210,210,210,1) 100%);
+                            
+                        }
+    
+                    }
+                    .ActiveFeature{
+                        background: rgb(56, 56, 56);
+                        color: white; 
+    
+                    }
                     
                 }
-            
-           
-            .HoverDisplay
-            {
-                position: relative;
-                z-index: 1;
-                &::before{
-                    content: 'Slower speed gives better compression';
-                    width: 150px;
-                    height: 50px;
-                    padding: 5px;
-                    top: 0;          
-                    right: -150px;
-                    text-align: center;
-                    position: absolute;
-                    transition: 0.4s;
-                    background: white;
-                    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-                    border-radius: 6px;
-                    font-size: 14px;
-                    @include flexColumn();
-                    opacity: 0;
+                .Bitrate,.Framerate,.VideoSize{
+                    width: fit-content;
+                    height:30px;
+                    @include flexRow();
+                    gap: 10px;
+                   
+                    input{
+                        width: 150px;
+                        height: 30px;
+    
+                    }
                 }
-                &:hover::before{
-                    display: block;  
-                    right: -200px;
-                    opacity: 1;
+                .rateInput{
+                    display: none;
+                }
+                .VideoSize{
+                    width: fit-content;
+                    height:30px;
+                    @include flexRow();
+                    .FeatureTitle{
+                        width: 200px;
+                        height: 100%;
+                        @include flexColumn();
+                    }
+                }
+    
+                    
+                .Heading{
+                    width:100%;
+                    height: 20%;
+                    @include flexRow();
+                    align-self: flex-start;
+                    font-size: 18px;
+                    font-weight: 400px;
+                    box-shadow: 0 0 20px rgba(109, 109, 109, 0.116);
+                }
+                .TimeFrameHolder{
+                    width: 100%;
+                    height: 50px;
                     @include flexColumn();
+                    display: none;
+                    #timeFrame{
+                        width: 200px;
+                    }
+                        
+                    }
+                
+               
+                .HoverDisplay
+                {
+                    position: relative;
+                    z-index: 1;
+                    &::before{
+                        content: 'Slower speed gives better compression';
+                        width: 150px;
+                        height: 50px;
+                        padding: 5px;
+                        bottom: 50px;          
+                        right: -50px;
+                        text-align: center;
+                        position: absolute;
+                        transition: 0.4s;
+                        background: white;
+                        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+                        border-radius: 6px;
+                        font-size: 14px;
+                        @include flexColumn();
+                        opacity: 0;
+                    }
+                    &:hover::before{
+                        display: block;  
+                        // bottom: 100%;  
+                        right: -100px;
+                        opacity: 1;
+                        @include flexColumn();
+                    }
                 }
             }
+            #videoTogglerSettings{
+                display: inherit;
+            }
+            #ConvertButton{
+                width: 160px;
+                height:70px;
+                background: green;
+                color:white;
+                user-select: none;
+                @include flexColumn();
+                transition: 0.2s;
+                border: none;
+                border-radius: 10px;
+                &:hover{
+                    background: white;
+                    color: green;
+                    border: 1px solid green;
+                }
+            }
+            .convertButtonLabel{
+                margin: 50px auto;
+                border: 2px solid #35353559;
+                padding: 20px;
+                text-align: center;
+                color: #353535;
+                font-family: arial;
+                position: absolute;
+                right: -10%;
+                bottom: 15%;
+                &::before {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid #35353559;
+                    right: 80%;
+                    top: -23px;
+                  }
+                  
+                  &::after {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid #fff;
+                    right: 80%;
+                    top: -18px;
+                  }
+                  
+            }
         }
-        
-        #ConvertButton{
-            width: 100px;
-            height:40px;
-            @include ButtonStyle();
-            background: white;
-            color:#353535;
-            @include flexColumn();
         }
-    }
+        }
+       
     .slidecontainer
     {
         position: relative;
@@ -424,4 +529,7 @@
       }
     
 }
+}   .feature-card-img{
+    width: 30px;
+    height: 30px;
 }

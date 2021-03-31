@@ -1,0 +1,15 @@
+
+{
+    "navbarBrandText": "",
+    "navbarBrandLogo": "/assets/images/wordsiwthletters-logo.svg",
+    "navItems":[
+        {
+         "name":"Blog",
+         "url":"blog"
+        },
+        {
+         "name":"",
+         "url":""
+       }
+     ]
+}

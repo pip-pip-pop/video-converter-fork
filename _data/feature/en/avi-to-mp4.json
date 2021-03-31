@@ -1,5 +1,93 @@
 {
     "H1":"AVI to MP4 Converter",
     "H2":"Convert AVI to MP4 for free online start by uploading your file below",
-    "TITLE":"AVI to MP4 converter- Convert AVI to MP4 online"
+    "TITLE":"AVI to MP4 converter- Convert AVI to MP4 online",
+    "META": "Easiest way to crop your mp4 videos in no time",
+    "keywords":"key1,key2,key3,key4",
+    "LABEL": "DOCX to PDF",
+    "BREADCRUMB_LABEL": "DOCX TO PDF",
+    "color": "#3867d6",
+    "height": "300px",
+    "TEXTUAL_CONTENT": [
+      {
+      "priority": 1,
+      "logoUrl": "/assets/lightbulb.svg",
+      "header": "Simple to use",
+      "content": "Our video conversion process elegant and straightforward"
+      },
+      {
+      "priority": 1,
+      "logoUrl": "/assets/target.svg",
+      "header": "Accurate results",
+      "content": "The results are accurate and hence completely satisfy user needs"
+      },
+      {
+      "priority": 1,
+      "logoUrl": "/assets/cross.svg",
+      "header": "Cross platform",
+      "content": "You can use this application from now on any operating system, like Windows/Mac/Linux/Android/iPhone."
+      },
+      {
+      "priority": 1,
+      "logoUrl": "/assets/shield.svg",
+      "header": "Secure and trustworthy",
+      "content": "There is no server involved and hence your video is safe"
+      },
+      {
+      "priority": 1,
+      "logoUrl": "/assets/fast.svg",
+      "header": "Fast and efficient",
+      "content": "Video conversion is really fast and you can get your job done in no time"
+      },
+      {
+      "priority": 1,
+      "logoUrl": "/assets/cloud_new.svg",
+      "header": "No files are uploaded",
+      "content": "The application works completely on your browser without invlolving any server.Hence your data is safe"
+      }
+    ],
+    "HOW_TO_CONTENT": {
+      "logoImageUrl": "/public/styles/VideoConverter/media/icons/idea.svg",
+      "heading": "How to convert avi to mp4",
+      "steps": [
+      "Choose your video file",
+      "Wait patiently till the video gets loaded",
+      "Choose your appropriate settings",
+      "Click save to download your video",
+      "Hurray! Enjoy our services"
+      ]
+    },
+    "FAQ": [
+      {
+      "question": "How much time does it takes to convert my video?",
+      "answer": "Its completely based on your video size, but we have optimized to give you the fastest possible result"
+      },
+      {
+      "question": "Can I rely on this application to get my job done?",
+      "answer": "Yes Ofcourse! Our application never fails to impress you by getting your job done in no time"
+      },
+      {
+      "question": "What will happen if I refresh the browser?",
+      "answer": "As we give first priority to your data security, they are not uploaded to server. So refreshing resets your settings and video file"
+      },
+      {
+      "question": "Are the test results accurate and correct?",
+      "answer": "Your test result is 100% accurate and precisely calculated"
+      },
+      {
+        "question": "Why is my video taking lot of time to convert?",
+        "answer": "Your video maybe of very large size. As we dont use servers,large video files take a bit of extra time to process"
+      }
+      ],
+      "StructuredDataWebsite": {
+        "@type": "WebSite",
+        "name": "appscms",
+        "alternateName": "appscms",
+        "url": "www.appscms.com"
+      },
+     "StructuredDataorganization": {
+        "@type": "Organization",
+        "url": "http://www.appscms.com",
+        "logo": "http://www.example.com/images/logo.png" 
+      }
     }

@@ -27,7 +27,7 @@ var OutputFormat=FeatureParameters[3];
 
 var Settings={Oformat:OutputFormat}
 var isgif=false;
-var rateInputs=document.querySelectorAll('#RateInput');
+var rateInputs=document.querySelectorAll('.rateInput');
 var bitrateInput=rateInputs[0];
 var framerateInput=rateInputs[1];
 const SettingsData={
@@ -36,6 +36,14 @@ const SettingsData={
 var FeatureElements={}
 var featureValues=document.querySelectorAll('.FeatureValue');
 var sliderSwitches=document.querySelectorAll('.sliderSwitch');
+var Togglers=document.querySelectorAll('.Toggler');
+var previousToggler=Togglers[0];
+var TogglerSettings={
+  "videoTogglerSettings":document.querySelector('#videoTogglerSettings'),
+  "audioTogglerSettings":document.querySelector('#audioTogglerSettings'),
+  "compressionTogglerSettings":document.querySelector('#compressionTogglerSettings')
+}
+
 
 const Number_of_Cores=()=>{
   var logicalProcessors = window.navigator.hardwareConcurrency;
@@ -48,6 +56,29 @@ videoSource.addEventListener('loadeddata',()=>{
   Workspace.style.display="inherit";
 })
 
+var showTogglerSettings=(CurrentToggler)=>{
+
+
+  TogglerSettings[CurrentToggler+"Settings"].style.display="inherit";
+
+}
+
+var switchToggler=(e)=>{
+  let Id=e.target.id;
+  if(previousToggler)
+  {
+    previousToggler.classList.remove("ActiveToggler");
+    TogglerSettings[previousToggler.id+"Settings"].style.display="none";
+    previousToggler=e.target;
+  }
+  e.target.classList.add("ActiveToggler");
+  showTogglerSettings(Id);
+
+}
+Togglers.forEach(toggler=>{
+  toggler.addEventListener('click',switchToggler);
+})
+
 // function inintialiseSettings(){
 //   for (field in fields)
 //   {
@@ -56,9 +87,11 @@ videoSource.addEventListener('loadeddata',()=>{
 // }
 
 const ChangeHandler=async (e)=>{
-  let Id=e.target.id;
-  let value=e.target.value;
-  
+  let Id=e.id;
+  let value=e.value;
+  Id=="Qrange"?QrangeValue.innerText=value:null;
+  Settings[Id]=value;
+  console.log(Settings);
 }
 
 var previousSelectedFeatureValue={}
@@ -87,7 +120,6 @@ const FeatureValueClickHandler=(e)=>{
   {
     previousSelectedFeatureValue[FeatureId].classList.remove('ActiveFeature');
   }
-  if(FeatureId==="Qrange") QrangeValue.innerText=value;
   if(FeatureId==="Oformat"&&value==="GIF"){isgif=true;timeFrameforGif.style.display="inherit";}else if(FeatureId==="Oformat"&&value!=="GIF"){isgif=false;timeFrameforGif.style.display="none";}
   Settings[FeatureId]=value;
   previousSelectedFeatureValue[FeatureId]=e.target;
@@ -143,7 +175,7 @@ const get_video_source_from_input=async(input)=>{
 
 
 const Actual_API_Function=async ()=>{
-  console.log(Settings.OnlyAudio)
+  // console.log(Settings.OnlyAudio)
   Workspace.style.display="none";
   Spinner.style.display="inherit";
   LandingPage.style.height="300px";

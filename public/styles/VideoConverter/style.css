@@ -28,10 +28,22 @@
           flex-direction: column;
 }
 
+.VideoConverter .Landing .ProgressBar {
+  width: 0%;
+  border-bottom: 8px solid white;
+  position: absolute;
+  top: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 .VideoConverter .Landing .Landingtext {
-  width: 100%;
-  height: 20%;
-  color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,7 +54,8 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
+  color: white;
 }
 
 .VideoConverter .Landing .Button {
@@ -65,8 +78,8 @@
 }
 
 .VideoConverter .Landing .Button .InputButton {
-  width: 100px;
-  height: 60px;
+  width: 140px;
+  height: 70px;
   background: white;
   color: #353535;
   display: -webkit-box;
@@ -85,10 +98,13 @@
           flex-direction: column;
   font-size: 14px;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .VideoConverter .Landing .Button .InputButton:hover {
-  background: grey;
+  background: none;
+  border: 1px solid white;
   color: white;
 }
 
@@ -123,21 +139,8 @@
 
 .VideoConverter .Landing .DownloadBox {
   width: 500px;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: 200px;
   display: none;
-}
-
-.VideoConverter .Landing .DownloadBox .DownloadLink {
-  width: 450px;
-  height: 50px;
-  text-align: center;
-  text-decoration: none;
-  background: white;
-  color: #353535;
-  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,6 +151,52 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: none;
+}
+
+.VideoConverter .Landing .DownloadBox .DownloadIcon {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.VideoConverter .Landing .DownloadBox .DownloadLink {
+  width: 140px;
+  height: 50px;
+  background: white;
+  color: #353535;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.VideoConverter .Landing .DownloadBox .DownloadLink:hover {
+  background: none;
+  border: 1px solid white;
+  color: white;
 }
 
 .VideoConverter .Workspace {
@@ -170,20 +219,20 @@
   text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  display: none;
   padding-left: 2%;
   padding-right: 2%;
+  background: white;
+  display: none;
 }
 
 .VideoConverter .Workspace .VideoTitle {
-  color: white;
+  color: #353535;
   height: 0px;
 }
 
-.VideoConverter .Workspace .Settings {
+.VideoConverter .Workspace .SettingsDiv {
   width: 100%;
-  height: 80%;
-  background: white;
+  height: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,15 +247,113 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.VideoConverter .Workspace .SettingsDiv .SettingsToggler {
+  width: 85%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.VideoConverter .Workspace .SettingsDiv .SettingsToggler .Toggler {
+  width: 25%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid #353535;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.VideoConverter .Workspace .SettingsDiv .SettingsToggler .Toggler:hover {
+  background: rgba(218, 218, 218, 0.637);
+}
+
+.VideoConverter .Workspace .SettingsDiv .SettingsToggler .ActiveToggler {
+  background: #353535;
+  color: white;
+}
+
+.VideoConverter .Workspace .SettingsDiv .Wrapper {
+  width: 100%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings {
+  width: 85%;
+  height: 100%;
+  padding: 1%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #353535;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
 }
 
-.VideoConverter .Workspace .Settings .FeatureValues {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .FeatureValues {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -224,7 +371,7 @@
   gap: 3px;
 }
 
-.VideoConverter .Workspace .Settings .FeatureValues .FeatureTitle {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .FeatureValues .FeatureTitle {
   width: 200px;
   height: 100%;
   display: -webkit-box;
@@ -243,7 +390,7 @@
           flex-direction: column;
 }
 
-.VideoConverter .Workspace .Settings .FeatureValues .FeatureValue {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .FeatureValues .FeatureValue {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   width: 70px;
@@ -267,28 +414,28 @@
   cursor: pointer;
 }
 
-.VideoConverter .Workspace .Settings .FeatureValues .FeatureValue:nth-child(2) {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .FeatureValues .FeatureValue:nth-child(2) {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
 }
 
-.VideoConverter .Workspace .Settings .FeatureValues .FeatureValue:nth-last-child(1) {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .FeatureValues .FeatureValue:nth-last-child(1) {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-.VideoConverter .Workspace .Settings .FeatureValues .FeatureValue:hover {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .FeatureValues .FeatureValue:hover {
   background: #d2d2d2;
   background: -webkit-gradient(linear, left top, left bottom, from(#d2d2d2), color-stop(56%, rgba(173, 173, 173, 0.89)), to(#d2d2d2));
   background: linear-gradient(180deg, #d2d2d2 0%, rgba(173, 173, 173, 0.89) 56%, #d2d2d2 100%);
 }
 
-.VideoConverter .Workspace .Settings .FeatureValues .ActiveFeature {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .FeatureValues .ActiveFeature {
   background: #383838;
   color: white;
 }
 
-.VideoConverter .Workspace .Settings .Bitrate, .VideoConverter .Workspace .Settings .Framerate, .VideoConverter .Workspace .Settings .VideoSize {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .Bitrate, .VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .Framerate, .VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .VideoSize {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -306,16 +453,16 @@
   gap: 10px;
 }
 
-.VideoConverter .Workspace .Settings .Bitrate input, .VideoConverter .Workspace .Settings .Framerate input, .VideoConverter .Workspace .Settings .VideoSize input {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .Bitrate input, .VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .Framerate input, .VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .VideoSize input {
   width: 150px;
   height: 30px;
 }
 
-.VideoConverter .Workspace .Settings #RateInput {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .rateInput {
   display: none;
 }
 
-.VideoConverter .Workspace .Settings .VideoSize {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .VideoSize {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -332,7 +479,7 @@
   text-align: center;
 }
 
-.VideoConverter .Workspace .Settings .VideoSize .FeatureTitle {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .VideoSize .FeatureTitle {
   width: 200px;
   height: 100%;
   display: -webkit-box;
@@ -351,7 +498,7 @@
           flex-direction: column;
 }
 
-.VideoConverter .Workspace .Settings .Heading {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .Heading {
   width: 100%;
   height: 20%;
   display: -webkit-box;
@@ -372,7 +519,7 @@
           box-shadow: 0 0 20px rgba(109, 109, 109, 0.116);
 }
 
-.VideoConverter .Workspace .Settings .TimeFrameHolder {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .TimeFrameHolder {
   width: 100%;
   height: 50px;
   display: -webkit-box;
@@ -392,22 +539,22 @@
   display: none;
 }
 
-.VideoConverter .Workspace .Settings .TimeFrameHolder #timeFrame {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .TimeFrameHolder #timeFrame {
   width: 200px;
 }
 
-.VideoConverter .Workspace .Settings .HoverDisplay {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .HoverDisplay {
   position: relative;
   z-index: 1;
 }
 
-.VideoConverter .Workspace .Settings .HoverDisplay::before {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .HoverDisplay::before {
   content: 'Slower speed gives better compression';
   width: 150px;
   height: 50px;
   padding: 5px;
-  top: 0;
-  right: -150px;
+  bottom: 50px;
+  right: -50px;
   text-align: center;
   position: absolute;
   -webkit-transition: 0.4s;
@@ -434,9 +581,9 @@
   opacity: 0;
 }
 
-.VideoConverter .Workspace .Settings .HoverDisplay:hover::before {
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .HoverDisplay:hover::before {
   display: block;
-  right: -200px;
+  right: -100px;
   opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,19 +601,19 @@
           flex-direction: column;
 }
 
-.VideoConverter .Workspace #ConvertButton {
-  width: 100px;
-  height: 40px;
-  text-align: center;
-  background: lightgray;
-  color: #353535;
-  border: none;
-  outline: none;
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  background: white;
-  color: #353535;
+.VideoConverter .Workspace .SettingsDiv .Wrapper #videoTogglerSettings {
+  display: inherit;
+}
+
+.VideoConverter .Workspace .SettingsDiv .Wrapper #ConvertButton {
+  width: 160px;
+  height: 70px;
+  background: green;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,11 +628,54 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border: none;
+  border-radius: 10px;
 }
 
-.VideoConverter .Workspace #ConvertButton:hover {
-  background: #353535;
-  color: lightgray;
+.VideoConverter .Workspace .SettingsDiv .Wrapper #ConvertButton:hover {
+  background: white;
+  color: green;
+  border: 1px solid green;
+}
+
+.VideoConverter .Workspace .SettingsDiv .Wrapper .convertButtonLabel {
+  margin: 50px auto;
+  border: 2px solid #35353559;
+  padding: 20px;
+  text-align: center;
+  color: #353535;
+  font-family: arial;
+  position: absolute;
+  right: -10%;
+  bottom: 15%;
+}
+
+.VideoConverter .Workspace .SettingsDiv .Wrapper .convertButtonLabel::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #35353559;
+  right: 80%;
+  top: -23px;
+}
+
+.VideoConverter .Workspace .SettingsDiv .Wrapper .convertButtonLabel::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  right: 80%;
+  top: -18px;
 }
 
 .VideoConverter .slidecontainer {
@@ -716,5 +906,10 @@
 
 .VideoConverter .RemoveAudio .sliderSwitch.round:before, .VideoConverter .OnlyAudio .sliderSwitch.round:before {
   border-radius: 50%;
+}
+
+.feature-card-img {
+  width: 30px;
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
