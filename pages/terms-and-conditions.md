@@ -1,7 +1,7 @@
 ---
 fileName: termAndCondition
-layout:  termAndCondition
-permalink: legal
+layout:  contactUs
+permalink: terms-and-conditions
 folderName: termAndCondition
 lang: en
 fileName: termAndCondition

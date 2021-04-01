@@ -21,9 +21,9 @@
 title: Video Converter
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+ Our online video converter tool is absolutely free and is easy to use. 
+ We make sure all your data is safe while you convert to video. 
+ We support a large range of audio formats like MP4, MKV, MOV etc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

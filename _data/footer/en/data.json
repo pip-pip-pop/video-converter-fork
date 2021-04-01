@@ -1,6 +1,6 @@
 {
     "logo":"",
-    "heading":"We make video editing easy.",
+    "heading":"We make video converting easy.",
     "company":[
        {
         "name":"About",
@@ -16,7 +16,12 @@
         "name":"Blog",
         "url":"/blog"
         
+      },
+      {
+        "name":"Terms and conditions",
+        "url":"/terms-and-conditions"
       }
+      
     ],
     "product":[
       {
@@ -224,5 +229,20 @@
             
         }
     ],
-    "messege": "© 2021 pdf AG — Made with love for the people of the internet."
+    "messege": "© 2021— Made with love for the people of the internet.",
+    "legal":[
+      {
+       "name":"Terms and conditions",
+       "url":"/terms-and-conditions"
+     },
+      {
+       "name":"Privacy Policy",
+       "url":"/privacy-policy"
+     },
+     {
+      "name":"Contact Us",
+      "url":"/contact"
+        
+     }
+   ]
  }
