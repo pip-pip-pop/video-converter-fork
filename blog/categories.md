@@ -1,5 +1,5 @@
 ---
 layout: categories
-title: Safevideokit Categories
+title: Safevideoconverter Categories
 permalink: /blog/categories
 ---

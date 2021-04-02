@@ -278,12 +278,19 @@
                     box-shadow: 0 0 20px rgba(109, 109, 109, 0.116);
                 }
                 .TimeFrameHolder{
-                    width: 100%;
+                    width: fit-content;
                     height: 50px;
-                    @include flexColumn();
+                    @include flexRow();
                     display: none;
+                    label{
+                        width: 200px;
+                        height: 100%;
+                        @include flexColumn();
+                    }
                     #timeFrame{
                         width: 200px;
+                        height: 40px;
+
                     }
                         
                     }
@@ -532,4 +539,8 @@
 }   .feature-card-img{
     width: 30px;
     height: 30px;
+}
+
+.logo-height{
+    object-fit: contain;
 }

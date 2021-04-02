@@ -1,5 +1,5 @@
 {
-    "logo":"",
+    "logo":"/assets/logo.svg",
     "heading":"We make video converting easy.",
     "company":[
        {
@@ -28,42 +28,42 @@
         "name": "AVI to mov Converter",
         "description": "Convert AVI to MOV online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-avi-to-mov"
       },
       {
         "name": "AVI to MP4 Converter",
         "description": "Convert AVI to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-avi-to-mp4"
       },
       {
         "name": "DVD to MP4 Converter",
         "description": "Convert DVD to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-dvd-to-mp4"
       },
       {
         "name": "FLV to MP4 converter",
         "description": "Convert FLV to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-flv-to-mp4"
       },
       {
         "name": "MKV to MOV converter",
         "description": "Convert MKV to MOV online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mkv-to-mov"
       },
       {
         "name": "MKV to MP4 converter",
         "description": "Convert MKV to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mkv-to-mp4"
       },
   
@@ -71,112 +71,112 @@
         "name": "MOV to AVI converter",
         "description": "Convert MOV to AVI online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mov-to-avi"
       },
           {
         "name": "MOV to GIF file converter",
         "description": "Convert MOV to GIF online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mov-to-gif"
       },
       {
         "name": "MOV to MP4 converter",
         "description": "Convert MOV to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mov-to-mp4"
       },
       {
         "name": "MOV to VMV conversion",
         "description": "Convert MOV to VMV online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mov-to-vmv"
       },
       {
         "name": "MP4 to AVI converter",
         "description": "Convert MP4 to AVI online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mp4-to-avi"
       },
       {
         "name": "MP4 to DVD converter",
         "description": "Convert MP4 to DVD online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mp4-to-dvd"
       },
       {
         "name": "MP4 to GIF converter",
         "description": "Convert MP4 to GIF online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mp4-to-gif"
       },
       {
         "name": "MP4 to MKV converter",
         "description": "Convert MP4 to MKV online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mp4-to-mov"
       },
       {
         "name": "MP4 to MKV converter",
         "description": "Convert MP4 to MKV online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mp4-to-mkv"
       },
       {
         "name": "MP4 to MPEG  converter",
         "description": "Convert MP4 to MPEG  online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mp4-to-mpeg"
       },
       {
         "name": "MP4 to video converter",
         "description": "Convert MP4 to video online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mp4-to-video"
       },
       {
         "name": "MPEG to MP4 converter",
         "description": "Convert MPEG to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-mpeg-to-mp4"
       },
       {
         "name": "Video to 3GP converter",
         "description": "Convert video to 3GP online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-video-to-3gp"
       },
       {
         "name": "Video to AVI converter",
         "description": "Convert video to AVI online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-video-to-avi"
       },
       {
         "name": "Video to FLV converter",
         "description": "Convert Video to FLV online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-video-to-flv"
       },
       {
         "name": "Video to GIF converter",
         "description": "Convert Video to GIF online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-video-to-gif"
       },
   
@@ -184,14 +184,14 @@
         "name": "Video to MP4 converter",
         "description": "Convert Video to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-video-to-mp4"
       },
       {
         "name": "WEBM to MP4 converter",
         "description": "Convert WEBM to MP4 online",
         "color": "#ff615c",
-        "icon": "/assets/star.svg",
+        "icon": "/assets/convert.svg",
         "url": "/convert-webm-to-mp4"
       }
     ],

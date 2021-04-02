@@ -24,7 +24,12 @@ var Feature=CurrentURL.slice(CurrentURL.lastIndexOf('/')+1,CurrentURL.length);
 var FeatureParameters=Feature.split('-');
 var InputFormat=FeatureParameters[1];
 var OutputFormat=FeatureParameters[3];
+if(OutputFormat==="gif"){
+  isgif=true;
+  timeFrameforGif.style.display="inherit";
+  console.log("is gif")
 
+}
 var Settings={Oformat:OutputFormat}
 var isgif=false;
 var rateInputs=document.querySelectorAll('.rateInput');
@@ -79,13 +84,6 @@ Togglers.forEach(toggler=>{
   toggler.addEventListener('click',switchToggler);
 })
 
-// function inintialiseSettings(){
-//   for (field in fields)
-//   {
-//     Settings[fields[field].id]=fields[field].value;
-//   }
-// }
-
 const ChangeHandler=async (e)=>{
   let Id=e.id;
   let value=e.value;
@@ -120,7 +118,10 @@ const FeatureValueClickHandler=(e)=>{
   {
     previousSelectedFeatureValue[FeatureId].classList.remove('ActiveFeature');
   }
-  if(FeatureId==="Oformat"&&value==="GIF"){isgif=true;timeFrameforGif.style.display="inherit";}else if(FeatureId==="Oformat"&&value!=="GIF"){isgif=false;timeFrameforGif.style.display="none";}
+  // else if(FeatureId==="Oformat"&&value!=="GIF")
+  // {isgif=false;
+  //   timeFrameforGif.style.display="none";
+  // }
   Settings[FeatureId]=value;
   previousSelectedFeatureValue[FeatureId]=e.target;
   previousSelectedFeatureValue[FeatureId].classList.add('ActiveFeature');
@@ -130,8 +131,6 @@ const FeatureValueClickHandler=(e)=>{
 }
 
 const sliderSwitchClickHandler=(e)=>{
-  // console.log(e.target.previousSibling.previousSibling.checked);
-  
   let checkedValue=e.target.previousSibling.previousSibling.checked;
   e.target.previousSibling.previousSibling.checked=!checkedValue;
   Settings[e.target.id]=!checkedValue;
@@ -161,7 +160,6 @@ const get_video_source_from_input=async(input)=>{
     Spinner.style.display="inherit";
     var VideoSourceFile=input.files[0];
     Filename.innerText=input.files[0].name;
-    // videoSource.setAttribute("type",input.files[0].type);
     const reader = new FileReader();
     reader.readAsDataURL(VideoSourceFile);
     reader.addEventListener("load", async function () {
@@ -175,7 +173,6 @@ const get_video_source_from_input=async(input)=>{
 
 
 const Actual_API_Function=async ()=>{
-  // console.log(Settings.OnlyAudio)
   Workspace.style.display="none";
   Spinner.style.display="inherit";
   LandingPage.style.height="300px";
@@ -187,13 +184,16 @@ const Actual_API_Function=async ()=>{
     new Uint8Array(sourceBuffer, 0, sourceBuffer.byteLength)
     );  
     //for gif
-    var startTime=0;
-    var endTime=0;
+    var startTime="00:00:00";
+    var endTime="00:00:04";
     if(isgif)
     {
       let Arguments=Settings.timeFrame.split(" ");
-      startTime=Arguments[0].slice(0,11);
-      endTime=Arguments[2].slice(0,11);
+      if(Arguments.length==3)
+      {
+      startTime=Arguments[0];
+      endTime=Arguments[2];
+      }
     }
 
     //change video encoder

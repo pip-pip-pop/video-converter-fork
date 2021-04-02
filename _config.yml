@@ -25,14 +25,14 @@ description: >- # this means to ignore newlines until "baseurl:"
  We make sure all your data is safe while you convert to video. 
  We support a large range of audio formats like MP4, MKV, MOV etc.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://safevideoconverter.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 theme: appscms-tools-theme
 # Build settings
 plugins:
   - jekyll-feed
-
+favicon: assets/logo.svg
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

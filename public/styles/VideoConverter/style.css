@@ -520,8 +520,26 @@
 }
 
 .VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .TimeFrameHolder {
-  width: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  display: none;
+}
+
+.VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .TimeFrameHolder label {
+  width: 200px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,11 +554,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  display: none;
 }
 
 .VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .TimeFrameHolder #timeFrame {
   width: 200px;
+  height: 40px;
 }
 
 .VideoConverter .Workspace .SettingsDiv .Wrapper .TogglerSettings .HoverDisplay {
@@ -911,5 +929,10 @@
 .feature-card-img {
   width: 30px;
   height: 30px;
+}
+
+.logo-height {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=style.css.map */
