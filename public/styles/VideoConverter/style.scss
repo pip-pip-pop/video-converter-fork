@@ -47,88 +47,156 @@
             top: 0;
             align-self: flex-start;
 
-        }
-        .Landingtext{
+            }
+            #CancelProcess{
+                width: 200px;
+                height: 50px;
+                background: white;
+                color:#353535;
+                @include flexColumn();
+                position: absolute;
+                top: 20%;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.2s;
+                display: none;
+                
+                &:hover{
+                    background: none;
+                    border: 1px solid white;
+                    color: white;
+                }
+                
+            }
+            #OverlayCancel{
+                position: absolute;
+                width: 100%;
+                height:100%;
+                background: rgba(0, 0, 0, 0.651);
+                z-index: 1;
+                @include flexColumn();
+                display: none;
+                backdrop-filter: blur(5px);
+                h4{
+                    font-size: 18px;
+                    color: white;
+                
+                }
+                .ButtonsWrap{
+                    width: 100%;
+                    height: 70%;
+                    @include flexRow();
+                    gap: 2%;
+                    .decisionButton{
+                        width: 200px;
+                        height: 50px;
+                        background: white;
+                        color:#353535;
+                        @include flexColumn();
+                        font-size: 20px;
+                        cursor: pointer;
+                        transition: 0.2s;
+                        &:hover{
+                            background: none;
+                            border: 1px solid white;
+                            color: white;
+                        }
+                    }
+                }
+                
+            }
+            .Landingtext
+            {
             width: fit-content;
             height: fit-content;
-            @include flexRow();
-            font-size: 12px;
+            font-size: 18px;
             color:white;
+            position: absolute;
+            bottom: 10%;
+            span{
+                font-size: 26px;
+            }
             // display: none;
             
-        }
-    .Button{
-        width: 120px;
-        height: 60px;
-        @include flexColumn();
-        // display: none;
-    .InputButton{
-        width: 140px;
-        height: 70px;
-        background: white;
-        color:#353535;
-        @include flexColumn();
-        font-size: 14px;
-        cursor: pointer;
-        transition: 0.2s;
-        &:hover{
-            background: none;
-            border: 1px solid white;
-            color: white;
-        }
+            }
+            .Button{
+
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                @include flexColumn();
+                svg{
+                    width: 70px;
+                    height: 70px;
+                }
+            .InputButton{
+                margin-top: 2%;
+                width: 200px;
+                height: 50px;
+                background: white;
+                color:#353535;
+                @include flexColumn();
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover{
+                    background: none;
+                    border: 1px solid white;
+                    color: white;
+                }
+                
         
-
-    }
-}
-.Spinner{
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top:6%;
-    background: url("./media/icons/spinner.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: none;
-}
-.LoadingText{
-    width: 300px;
-    height: 60px;
-    border-radius: 10px;
-    color: white;
-    @include flexRow();
-    display: none;
-}
-.DownloadBox{
-    width: 500px;
-    height: 200px;
-    display: none;
-    @include flexColumn();
-    justify-content: space-around;
-    display: none;
-.DownloadIcon{
-    width: 50px;
-    height: 50px;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-.DownloadLink{
-    width: 140px;
-    height: 50px;
-    background: white;
-    color:#353535;
-    @include flexColumn();
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.2s;
-    text-decoration: none;
-    &:hover{
-        background: none;
-        border: 1px solid white;
-        color: white;
-    }
-}
-}
+            }
+            }
+            .Spinner{
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top:6%;
+                background: url("./media/icons/spinner.gif");
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: none;
+            }
+            .LoadingText{
+                width: 300px;
+                height: 60px;
+                border-radius: 10px;
+                color: white;
+                @include flexRow();
+                display: none;
+            }
+            .DownloadBox{
+                width: 500px;
+                height: 200px;
+                display: none;
+                @include flexColumn();
+                justify-content: space-around;
+                display: none;
+            .DownloadIcon{
+                width: 50px;
+                height: 50px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                
+            }
+            .DownloadLink{
+                width: 200px;
+                height: 50px;
+                background: white;
+                color:#353535;
+                @include flexColumn();
+                font-size: 14px;
+                cursor: pointer;
+                transition: 0.2s;
+                text-decoration: none;
+                &:hover{
+                    background: none;
+                    border: 1px solid white;
+                    color: white;
+                }
+            }
+            }
 }
     .Workspace{
         width: 100%;
@@ -544,3 +612,13 @@
 .logo-height{
     object-fit: contain;
 }
+
+
+@media screen and (max-width: 600px){
+
+    .TogglerSettings{
+      padding-top: 0%;
+      padding-bottom: 0%;
+      
+    }
+  }

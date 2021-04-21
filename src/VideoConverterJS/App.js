@@ -18,11 +18,59 @@ const UploadButton=document.querySelector('.Button');
 var LandingText=document.querySelector('.Landingtext');
 var QrangeValue=document.getElementById('QrangeValue');
 var timeFrameforGif=document.querySelector('.TimeFrameHolder');
+var ProgressBar=document.querySelector('.ProgressBar');
+var videoTime=0
+  
+var inCompress=false
+var CancelProgressOverlay=document.getElementById("OverlayCancel")
+var Show_or_Hide_CancelProgressOverlay=(params)=>{
+  if(params=="open")
+  {
+    CancelProgressOverlay.style.display="inherit";
+    return
+  }
+  else if(params=="Yes")
+  {
+    location.reload();
+    return
+  }
+  else if(params=="No"){
+    CancelProgressOverlay.style.display="none";
+    return
+  }
+ 
+}
+console.stdlog = console.log.bind(console);  
+console.log = function(){
+ 
+    let consoleLog=Array.from(arguments);
+    
+    let CurrentTime=null;
+    if(consoleLog[0].indexOf("time=")!=-1)
+    {
+      CurrentTime=consoleLog[0].slice(consoleLog[0].indexOf("time="),consoleLog[0].indexOf("time=")+ consoleLog[0].substring(consoleLog[0].indexOf("time=")).indexOf("bitrate="));
+    }
+      ProgressBar.style.width="0%";
+    if(consoleLog[0].indexOf("inputCompress")!=-1)
+      inCompress=true
+    if(CurrentTime!=null){
+      let a=CurrentTime.slice(5,CurrentTime.length).split(':');
+      var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
+      var percentage=seconds/videoTime*100;
+      ProgressBar.style.width=percentage+"%";
+      LandingText.innerHTML=`<span>${percentage>0?percentage.toFixed(0):0}% </span>`;
+      
+    }
+    
+}
 
 var CurrentURL=window.location.href;
+
 var Feature=CurrentURL.slice(CurrentURL.lastIndexOf('/')+1,CurrentURL.length);
 var FeatureParameters=Feature.split('-');
 var InputFormat=FeatureParameters[1];
+document.getElementById("ButtonLabel").innerText=`Upload ${InputFormat}`;
+LandingText.innerText=`or drop your ${InputFormat} file here`;
 var OutputFormat=FeatureParameters[3];
 if(OutputFormat==="gif"){
   isgif=true;
@@ -55,7 +103,8 @@ const Number_of_Cores=()=>{
   return logicalProcessors;
 }
 
-videoSource.addEventListener('loadeddata',()=>{
+videoSource.addEventListener('loadeddata',(e)=>{
+  videoTime=e.path[0].duration;
   LandingPage.style.height="90vh";
   Spinner.style.display="none";
   Workspace.style.display="inherit";
@@ -153,7 +202,7 @@ async function load_ffmpeg(){
 
 }
 
-
+var cancelButton=document.getElementById("CancelProcess");
 const get_video_source_from_input=async(input)=>{
     UploadButton.style.display="none";
     LandingText.style.display="none";
@@ -171,13 +220,13 @@ const get_video_source_from_input=async(input)=>{
 
 }
 
-
 const Actual_API_Function=async ()=>{
   Workspace.style.display="none";
-  Spinner.style.display="inherit";
   LandingPage.style.height="300px";
-  Settings.OnlyAudio?LoadingText.innerText="Please wait, Extracting the audio":LoadingText.innerText="Please wait, Re-encoding the video";
+  LandingText.style.display="inherit";
+  Settings.OnlyAudio?LandingText.innerText="Please wait, Extracting the audio":LandingText.innerText="Please wait, Re-encoding the video";
   LoadingText.style.display="inherit";
+  cancelButton.style.display="inherit";
   ffmpeg.FS(
     "writeFile",
     `input.${InputFormat}`,
@@ -228,9 +277,10 @@ const Actual_API_Function=async ()=>{
     
     
     //start download
-    Spinner.style.display="none";
-    LoadingText.style.display="none";
+    cancelButton.style.display="none";
+    LandingText.style.display="none";
     initateDownload();
+    
     // your video is 10 minutes (600 seconds) long and an output of 50 MB is desired. Since bitrate = file size / duration:
 
     // (50 MB * 8192 [converts MB to kilobits]) / 600 seconds = ~683 kilobits/s total bitrate
